@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const is_validateClassName = str => {
+            let regexp = /^[CAP][0-9]{4}[GHIKLM]$/;
+
+            if (regexp.test(str)){
+                return `${str} is validate class's name. <br>`;
+            } else {
+                return `${str} isn't validate class's name. <br>`;
+            }
+        }
+        
+        let str = prompt("input class's name: ");
+        document.write(is_validateClassName(str));
+    </script>
+</body>
+</html>
